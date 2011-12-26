@@ -1,0 +1,12 @@
+数据库
+1. 表:shoppingcat 购物车, 每个第一次添加商品到购物车时生成一个, 生成订单后应该会删除吧.
+2. 表:shoppingcat_item 购物车内的商品
+
+前台
+1. 在cookie中有一个c字段, 保存了shoppingcat的ID
+
+后台
+1. 重新读取购物车里面的内容
+	1.1. 通过cookie里面的shoppingcat取到shoppingcat以及购物车里面的商品.
+	
+	
