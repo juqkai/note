@@ -1,0 +1,1 @@
+1. 可用量计算公式:库存数量(stockQuantity) - 销售占用数量(saleQuantity)

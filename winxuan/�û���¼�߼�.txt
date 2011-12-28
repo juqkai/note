@@ -7,4 +7,10 @@ COOKIE持续登录验证原理
 3. 在cookie中保存一个用户名.
 
 漏洞
-如果拿到了一个用户的cookie信息, 是不是就可以直接伪造的登录了呢?
+	如果拿到了一个用户的cookie信息, 是不是就可以直接伪造的登录了呢?
+
+权限拦截
+	通过拦截器实现, 拦截器将会拦截所有的/customer/*下的连接, 其判断机制与cookie验证原理相同. 
+
+其它
+	在拦截或是Spring注入参数时都依赖于cookie, 所以需要request的实例, 所以, 在请求中, 会直接将request, response保存到WebContent对象中类型为ThreadLocal的静态变量WEBCONTEXT_LOCAL中, 这样, 程序任何地方都可以取到request, response信息, 因为threadLocal对象是线程单例的.
