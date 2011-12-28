@@ -1,0 +1,9 @@
+作用
+增强Spring参数注入, 使系统能够注入一些其它的信息, 而不用手动再去进行组装.如:shoppingcat, user(customer, employee, seller), pagination(分页)
+
+原理
+通过实现WebArgumentResolver接口, 在resolveArgument方法中对参数的注解进行解析, 如果有指定注解的话, 就进行类型注入.
+
+亮点
+1. 正常时读取远程客户端的IP使用request.getRemoteAddr()方法, 但是当客户端使用了代理, 或者服务器使用了nginx这类有代理的服务器时, 是直接读不到IP地址的, 这时应该使用 X-Forwarded-For 的header属性, 但是得注意这个属性可以伪造(参考:./reference\X-Forwarded-For)
+2. 在使用反向代理时, 应该使用 X-Real-IP 来读取用户真实IP

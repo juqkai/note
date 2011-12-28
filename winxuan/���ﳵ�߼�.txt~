@@ -14,7 +14,3 @@
 	1. 拦截并生成shoppingcat ec-core\src\main\java\com\winxuan\ec\support\interceptor\ParameterArgumentResolver.java  P80
 	2. shoppingcat service  ec-core\src\main\java\com\winxuan\ec\service\shoppingcart\ShoppingcartServiceImpl 
 
-
-添加商品到购物车
-	1. 
-	2. 将shoppingcat里面的商品数保存到cookie中
